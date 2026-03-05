@@ -1,0 +1,37 @@
+{
+    "common": {
+        "appName": "Scrap Tech",
+        "loading": "Loading...",
+        "error": "Something went wrong",
+        "retry": "Retry",
+        "cancel": "Cancel",
+        "save": "Save",
+        "delete": "Delete",
+        "done": "Done"
+    },
+    "auth": {
+        "login": "Sign In",
+        "register": "Sign Up",
+        "email": "Email",
+        "password": "Password",
+        "confirmPassword": "Confirm Password",
+        "forgotPassword": "Forgot Password?",
+        "noAccount": "Don't have an account?",
+        "hasAccount": "Already have an account?",
+        "signOut": "Sign Out"
+    },
+    "home": {
+        "title": "Scrap Tech"
+    },
+    "settings": {
+        "title": "Settings",
+        "theme": "Theme",
+        "light": "Light",
+        "dark": "Dark",
+        "system": "System",
+        "language": "Language",
+        "english": "English",
+        "vietnamese": "Tiếng Việt",
+        "account": "Account"
+    }
+}

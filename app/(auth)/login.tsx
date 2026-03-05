@@ -1,0 +1,64 @@
+import { Link } from "expo-router";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { ActivityIndicator, Alert, KeyboardAvoidingView, Platform, Pressable, StyleSheet, Text, TextInput, View } from "react-native";
+
+import { useAuth } from "@/src/features/auth";
+import { useThemeColors } from "@/src/utils/useThemeColors";
+
+export default function LoginScreen() {
+	const { t } = useTranslation();
+	const c = useThemeColors();
+	const { signIn } = useAuth();
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const [loading, setLoading] = useState(false);
+
+	const handleSignIn = async () => {
+		if (!email || !password) return;
+		setLoading(true);
+		try {
+			await signIn(email, password);
+		} catch (error: any) {
+			Alert.alert(t("common.error"), error.message);
+		} finally {
+			setLoading(false);
+		}
+	};
+
+	return (
+		<KeyboardAvoidingView behavior={Platform.OS === "ios" ? "padding" : "height"} style={[styles.container, { backgroundColor: c.bg }]}>
+			<View style={styles.inner}>
+				<Text style={[styles.appName, { color: c.primary }]}>{t("common.appName")}</Text>
+				<Text style={[styles.title, { color: c.text }]}>{t("auth.login")}</Text>
+
+				<TextInput style={[styles.input, { color: c.text, borderColor: c.inputBorder, backgroundColor: c.inputBg }]} placeholder={t("auth.email")} placeholderTextColor={c.placeholder} value={email} onChangeText={setEmail} autoCapitalize="none" keyboardType="email-address" />
+
+				<TextInput style={[styles.input, { color: c.text, borderColor: c.inputBorder, backgroundColor: c.inputBg }]} placeholder={t("auth.password")} placeholderTextColor={c.placeholder} value={password} onChangeText={setPassword} secureTextEntry />
+
+				<Pressable style={[styles.button, { backgroundColor: c.primary }, loading && styles.buttonDisabled]} onPress={handleSignIn} disabled={loading}>
+					{loading ? <ActivityIndicator color="#fff" /> : <Text style={styles.buttonText}>{t("auth.login")}</Text>}
+				</Pressable>
+
+				<Link href="/(auth)/register" asChild>
+					<Pressable style={styles.linkRow}>
+						<Text style={{ color: c.textSecondary }}>{t("auth.noAccount")}</Text>
+						<Text style={{ color: c.primary, fontWeight: "600", marginLeft: 4 }}>{t("auth.register")}</Text>
+					</Pressable>
+				</Link>
+			</View>
+		</KeyboardAvoidingView>
+	);
+}
+
+const styles = StyleSheet.create({
+	container: { flex: 1 },
+	inner: { flex: 1, justifyContent: "center", padding: 28 },
+	appName: { fontSize: 36, fontWeight: "800", textAlign: "center", marginBottom: 4 },
+	title: { fontSize: 18, textAlign: "center", marginBottom: 32 },
+	input: { borderWidth: 1, borderRadius: 12, padding: 16, fontSize: 16, marginBottom: 14 },
+	button: { padding: 16, borderRadius: 12, alignItems: "center", marginTop: 8, marginBottom: 20 },
+	buttonDisabled: { opacity: 0.6 },
+	buttonText: { color: "#fff", fontSize: 16, fontWeight: "700" },
+	linkRow: { flexDirection: "row", justifyContent: "center", alignItems: "center" },
+});
