@@ -52,11 +52,13 @@ jobs:
           path: coverage/lcov.info
           retention-days: 7
 
-      # ── 6. Phân tích SonarCloud ─────────────────────────────────────────────
+      # ── 6. Phân tích SonarCloud (dùng npm thay Docker để tránh Node.js 18 trong Alpine) ──
+      - name: Install SonarQube Scanner
+        run: npm install -g sonarqube-scanner
+
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@v2.0.0
+        run: sonar-scanner
         env:
-          # GITHUB_TOKEN: tự động có sẵn trong GitHub Actions
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # SONAR_TOKEN: tạo tại sonarcloud.io → My Account → Security
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: https://sonarcloud.io
