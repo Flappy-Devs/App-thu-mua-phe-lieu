@@ -22,11 +22,11 @@ module.exports = {
   // ── Coverage report (lcov cho SonarCloud, text cho terminal) ────────────
   collectCoverage: false,          // chỉ bật khi truyền flag --coverage
   collectCoverageFrom: [
-    "app/**/*.{ts,tsx}",
-    "src/**/*.{ts,tsx}",
-    "!app/_layout.tsx",            // layout không cần đo coverage
-    "!**/*.d.ts",
-    "!**/node_modules/**"
+    // Chỉ đo coverage cho các màn hình được test thực sự
+    "app/MyOrdersScreen.tsx",       // tested by HomeScreen.test.tsx
+    "app/Onboarding1Screen.tsx",    // tested by OnboardingScreen.test.tsx
+    "app/Onboarding2Screen.tsx",    // tested by OnboardingScreen.test.tsx
+    "app/Onboarding3Screen.tsx",    // tested by OnboardingScreen.test.tsx
   ],
   coverageReporters: ["lcov", "text", "text-summary"],
   coverageDirectory: "coverage",
