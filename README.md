@@ -1,7 +1,23 @@
 # Welcome to your Expo app 👋
-[![CI — Test & SonarCloud Analysis](https://github.com/Flappy-Devs/ScrapTech/actions/workflows/ci.yml/badge.svg)](https://github.com/Flappy-Devs/ScrapTech/actions/workflows/ci.yml)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Flappy-Devs_ScrapTech&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Flappy-Devs_ScrapTech)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Flappy-Devs_ScrapTech&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Flappy-Devs_ScrapTech)
+# Welcome to your Expo app 👋
+
+<p align="left">
+  <a href="https://github.com/Flappy-Devs/ScrapTech/actions/workflows/ci.yml">
+    <img src="https://github.com/Flappy-Devs/ScrapTech/actions/workflows/ci.yml/badge.svg" alt="CI Status">
+  </a>
+  <a href="https://sonarcloud.io/summary/new_code?id=Flappy-Devs_ScrapTech">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=Flappy-Devs_ScrapTech&metric=alert_status" alt="Quality Gate Status">
+  </a>
+  <a href="https://sonarcloud.io/summary/new_code?id=Flappy-Devs_ScrapTech">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=Flappy-Devs_ScrapTech&metric=coverage" alt="Coverage">
+  </a>
+  <a href="https://sonarcloud.io/summary/new_code?id=Flappy-Devs_ScrapTech">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=Flappy-Devs_ScrapTech&metric=bugs" alt="Bugs">
+  </a>
+  <a href="https://sonarcloud.io/summary/new_code?id=Flappy-Devs_ScrapTech">
+    <img src="https://sonarcloud.io/api/project_badges/measure?project=Flappy-Devs_ScrapTech&metric=vulnerabilities" alt="Vulnerabilities">
+  </a>
+</p>
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
