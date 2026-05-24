@@ -74,6 +74,7 @@ function ScreenHeader({ title }: { title: string }) {
 		<View style={styles.header}>
 			<Pressable
 				style={styles.backButton}
+				testID="back-button"
 				onPress={() => router.replace("/user-info")}
 			>
 				<Ionicons name="chevron-back" size={20} color="#1E1E1E" />

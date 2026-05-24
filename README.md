@@ -16,6 +16,27 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
    npx expo start
    ```
 
+## Testing
+
+This project includes comprehensive Jest unit tests. To run tests:
+
+```bash
+# Run all tests
+npm test
+
+# Watch mode during development
+npm run test:watch
+
+# Generate coverage report
+npm run test:coverage
+```
+
+For detailed testing documentation, see:
+
+- [JEST_TESTS_INDEX.md](./JEST_TESTS_INDEX.md) - Complete testing index
+- [TEST_QUICK_REFERENCE.md](./TEST_QUICK_REFERENCE.md) - Quick command reference
+- [TESTING.md](./TESTING.md) - Comprehensive testing guide
+
 In the output, you'll find options to open the app in a
 
 - [development build](https://docs.expo.dev/develop/development-builds/introduction/)

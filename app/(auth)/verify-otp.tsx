@@ -159,6 +159,7 @@ export default function VerifyOtpScreen() {
                             styles.backButton,
                             { borderColor: colors.highlight.medium },
                         ]}
+                        testID="back-button"
                         onPress={() => router.back()}
                     >
                         <Ionicons
@@ -218,6 +219,7 @@ export default function VerifyOtpScreen() {
 
                     <TextInput
                         ref={inputRef}
+                        testID="otp-input"
                         value={otp}
                         onChangeText={(value) =>
                             setOtp(value.replace(/\D/g, "").slice(0, OTP_LENGTH))
@@ -263,6 +265,7 @@ export default function VerifyOtpScreen() {
                                     styles.resendCountdown,
                                     { color: colors.highlight.medium },
                                 ]}
+                                testID="resend-timer"
                             >
                                 Gửi lại sau {formatCountdown(countdown)}
                             </Text>

@@ -56,6 +56,7 @@ export default function MyOrdersScreen() {
 
 						<Pressable
 							style={styles.bellButton}
+							testID="notification-button"
 							onPress={() => router.push("/(app)/notifications")}
 						>
 							<Ionicons
@@ -63,7 +64,9 @@ export default function MyOrdersScreen() {
 								size={22}
 								color="#1E1E1E"
 							/>
-							{hasUnreadNotification ? <View style={styles.bellDot} /> : null}
+							{hasUnreadNotification ? (
+								<View style={styles.bellDot} testID="notification-badge" />
+							) : null}
 						</Pressable>
 					</View>
 
@@ -107,7 +110,11 @@ export default function MyOrdersScreen() {
 
 				{isLoading ? (
 					<View style={styles.loadingBox}>
-						<ActivityIndicator size="large" color="#22C55E" />
+						<ActivityIndicator
+							size="large"
+							color="#22C55E"
+							testID="activity-indicator"
+						/>
 					</View>
 				) : activeOrders.length === 0 ? (
 					<View style={styles.emptyCard}>
@@ -128,6 +135,7 @@ export default function MyOrdersScreen() {
 
 			<Pressable
 				style={styles.fab}
+				testID="fab-button"
 				onPress={() => router.push("/orders/new")}
 			>
 				<Ionicons name="add" size={32} color="#FFFFFF" />
