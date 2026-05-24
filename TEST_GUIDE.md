@@ -45,7 +45,7 @@ __tests__/
 - ✅ Error handling and alert display on verification failure
 - ✅ Route params handling (`phone`, `flow` parameters)
 
-**Test Count:** 9 tests
+**Test Count:** 10 tests
 
 ### 2. **Orders/Home Module** 📦
 
@@ -66,21 +66,26 @@ __tests__/
 - `useMyProfile` - Fetch user profile data
 - `useMyNotifications` - Fetch notifications
 
-**Test Count:** 8 tests
+**Test Count:** 11 tests
 
 ### 3. **Admin Module** 👨‍💼
 
 #### **Admin Dashboard** (`admin-dashboard.test.tsx`)
 
-- ✅ Dashboard renders with correct title
-- ✅ Navigation tabs display
+- ✅ Dashboard renders with title, subtitle, and filter chips
+- ✅ Hook integration check (`useAdminPickupOrders("active")`)
+- ✅ Loading state behavior
+- ✅ Empty state behavior when no orders exist
+- ✅ Filter interaction by order status
+- ✅ Status badge rendering for all supported statuses
+- ✅ Fallback rendering for missing total and address
+- ✅ Navigation to order detail on card press
 
 **Hooks Used:**
 
 - `useAdminPickupOrders` - Fetch orders for admin view
-- `useThemeColors` - Theme styling
 
-**Test Count:** 2 tests
+**Test Count:** 7 tests
 
 ### 4. **Settings Module** ⚙️
 
@@ -97,7 +102,7 @@ __tests__/
 
 **Test Count:** 8+ tests
 
-**Total Test Count:** 35+ tests across 5 test files
+**Total Test Count:** 51 tests across 5 test files
 
 ## 🚀 Running Tests
 

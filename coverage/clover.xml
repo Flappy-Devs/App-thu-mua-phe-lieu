@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1779645863498" clover="3.2.0">
-  <project timestamp="1779645863499" name="All files">
-    <metrics statements="151" coveredstatements="96" conditionals="112" coveredconditionals="65" methods="52" coveredmethods="32" elements="315" coveredelements="193" complexity="0" loc="151" ncloc="151" packages="3" files="5" classes="5"/>
+<coverage generated="1779646449370" clover="3.2.0">
+  <project timestamp="1779646449370" name="All files">
+    <metrics statements="151" coveredstatements="111" conditionals="112" coveredconditionals="78" methods="52" coveredmethods="39" elements="315" coveredelements="228" complexity="0" loc="151" ncloc="151" packages="3" files="5" classes="5"/>
     <package name="(admin)">
-      <metrics statements="25" coveredstatements="10" conditionals="21" coveredconditionals="7" methods="10" coveredmethods="3"/>
+      <metrics statements="25" coveredstatements="25" conditionals="21" coveredconditionals="20" methods="10" coveredmethods="10"/>
       <file name="index.tsx" path="C:\BK\Mobile\ScrapTech\app\(admin)\index.tsx">
-        <metrics statements="25" coveredstatements="10" conditionals="21" coveredconditionals="7" methods="10" coveredmethods="3"/>
+        <metrics statements="25" coveredstatements="25" conditionals="21" coveredconditionals="20" methods="10" coveredmethods="10"/>
         <line num="23" count="1" type="stmt"/>
-        <line num="31" count="2" type="cond" truecount="0" falsecount="1"/>
-        <line num="32" count="2" type="stmt"/>
-        <line num="34" count="2" type="stmt"/>
-        <line num="35" count="2" type="cond" truecount="1" falsecount="1"/>
-        <line num="36" count="2" type="stmt"/>
-        <line num="39" count="0" type="stmt"/>
-        <line num="42" count="2" type="stmt"/>
-        <line num="55" count="8" type="stmt"/>
-        <line num="57" count="8" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="91" count="0" type="stmt"/>
-        <line num="101" count="0" type="stmt"/>
-        <line num="103" count="0" type="cond" truecount="0" falsecount="2"/>
-        <line num="106" count="0" type="stmt"/>
-        <line num="109" count="0" type="stmt"/>
-        <line num="136" count="0" type="cond" truecount="0" falsecount="6"/>
-        <line num="138" count="0" type="stmt"/>
-        <line num="144" count="0" type="stmt"/>
-        <line num="150" count="0" type="stmt"/>
-        <line num="156" count="0" type="stmt"/>
-        <line num="162" count="0" type="stmt"/>
-        <line num="168" count="0" type="stmt"/>
-        <line num="177" count="0" type="stmt"/>
+        <line num="31" count="9" type="cond" truecount="0" falsecount="1"/>
+        <line num="32" count="9" type="stmt"/>
+        <line num="34" count="9" type="stmt"/>
+        <line num="35" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="36" count="7" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="42" count="9" type="stmt"/>
+        <line num="55" count="36" type="stmt"/>
+        <line num="57" count="36" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="91" count="10" type="stmt"/>
+        <line num="101" count="10" type="stmt"/>
+        <line num="103" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="106" count="10" type="stmt"/>
+        <line num="109" count="1" type="stmt"/>
+        <line num="136" count="10" type="cond" truecount="6" falsecount="0"/>
+        <line num="138" count="4" type="stmt"/>
+        <line num="144" count="2" type="stmt"/>
+        <line num="150" count="1" type="stmt"/>
+        <line num="156" count="1" type="stmt"/>
+        <line num="162" count="1" type="stmt"/>
+        <line num="168" count="1" type="stmt"/>
+        <line num="177" count="10" type="stmt"/>
         <line num="184" count="1" type="stmt"/>
       </file>
     </package>
